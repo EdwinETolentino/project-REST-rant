@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"); // imports mongoose and saves it to a variable mongoose
 
 const placeSchema = new mongoose.Schema({
-    name: { type: String, required: true },
+    name: { type: String, required: true }, // the first property
     pic: { type: String, default: "http://placekitten.com/350/350" },
     cuisines: { type: String, required: true },
     city: { type: String, default: "Anytown" },

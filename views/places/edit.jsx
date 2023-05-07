@@ -5,11 +5,17 @@ function edit_form(data) {
     return (
         <Def>
             <main>
-                <h1>Add a New Place</h1>
-                <form method="POST" action={`/places/${data.index}?_method=PUT`}>
+                <h1>Edit Place</h1>
+                <form method='POST' action={`/places/${data.index}?_method=PUT`}>
                     <div className='form-group'>
                         <label htmlFor='name'>Place Name</label>
-                        <input className='form-control' id='name' name='name' value={data.place.name} required />
+                        <input
+                            className='form-control'
+                            id='name'
+                            name='name'
+                            value={data.place.name}
+                            required
+                        />
                     </div>
                     <div className='form-group'>
                         <label htmlFor='pic'>Place Picture</label>
@@ -25,7 +31,22 @@ function edit_form(data) {
                     </div>
                     <div className='form-group'>
                         <label htmlFor='cuisines'>Cuisines</label>
-                        <input className='form-control' id='cuisines' name='cuisines' value={data.place.cuisines} required />
+                        <input
+                            className='form-control'
+                            id='cuisines'
+                            name='cuisines'
+                            value={data.place.cuisines}
+                            required
+                        />
+                        <div className='form-group col-sm-4'>
+                            <label htmlFor='founded'>Founded</label>
+                            <input
+                                className='form-control'
+                                id='founded'
+                                name='founded'
+                                value={data.place.founded}
+                            />
+                        </div>
                     </div>
                     <input className='btn btn-primary' type='submit' value='Add Place' />
                 </form>
@@ -34,5 +55,4 @@ function edit_form(data) {
     );
 }
 
-
-module.exports = edit_form
+module.exports = edit_form;
